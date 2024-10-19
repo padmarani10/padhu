@@ -1,0 +1,899 @@
+		------------------------
+		    AWS DEVELOPMENT  
+		------------------------
+
+
+OS Components:
+1. Shell-->GUI,CLI
+in windows OS-->3 shells -->GUI, CLI, PowerShell(used by developers)
+Kernel --> hardware --Source code --Closed source OS
+
+Layers in OS:
+
+Application Software
+	|
+  OS-Shell, Kernel
+	|
+     Hardware
+
+Examples for Closed source OS:
+*Dedicated support
+1.Windows
+2.UNIX- MAC OS, Apple IOS
+
+Examples for OPEN SOURCE OS:
+1. Linux-- REDHAT Linux
+2. Android
+*Community Support
+
+Hardware Resources:
+Mother Board - CPU & RAM, Storage, Network
+
+Resources in terms of computer, cloud -- Hardware
+
+-----TYPES OF OS-----
+
+Mobile OS -- android, apple IOS, Tizen, java
+Desktop/Laptop OS -- MS windows, Linux, MAC OS
+Server OS -- windows server, RHEL, UBUNTU SERVER, UNIX
+Security OS-- Kali Linux, Parrot Linux, SANS
+Network OS-- CISCO IOS, F5 OS, FORTIENT, JUNIPER JUNOS
+
+-----Linux versions of OS:
+home RedHat fedora, ubuntu desktop
+
+-----SERVERS AND CLIENTS----
+CHARACTERISTICS::
+1.centralized management
+2.security
+3.Availability(11 9s)
+99.99999999999( 1 sec in 5 years)
+0 downtime
+4.scalability(where servers are increased without human involvement)
+5.reliability(the time required to recover from the crash)
+
+----Scalability:
+Definition: Scalability refers to how well a system can react and adapt to changing demands. It involves adjusting resources (such as computing power, storage, or network capacity) to handle varying workloads.
+
+----Reliability:
+Definition: Reliability measures the ability of a system to function correctly, including avoiding data corruption. 
+
+----Availability:
+Definition: Availability measures how often a system is accessible for use, even if it may not be functioning correctly. It ensures that customers can access cloud services whenever needed.
+EXAMPLE:A highly available cloud service remains accessible even during maintenance or failures.
+
+----Virtualization::
+Virtual server for scalability.
+To address the challenges by the physical servers is called virtualization.
+
+Virtualization uses the - Rack server
+Virtualization is a technique of how to separate a service from the underlying physical delivery of that service. It is the process of creating a virtual version of something like computer hardware. It was initially developed during the mainframe era. It involves using specialized software to create a virtual or software-created version of a computing resource rather than the actual version of the same resource. With the help of Virtualization, multiple operating systems and applications can run on the same machine and its same hardware at the same time, increasing the utilization and flexibility of hardware. 
+
+----BENEFITS OF  VIRTUALIZATION----
+More flexible and efficient allocation of resources. 
+Enhance development productivity. 
+It lowers the cost of IT infrastructure. 
+Remote access and rapid scalability. 
+High availability and disaster recovery. 
+Pay peruse of the IT infrastructure on demand. 
+Enables running multiple operating systems.
+
+----HYPERVISOR----
+A hypervisor is a software that you can use to run multiple virtual machines on a single physical machine. Every virtual machine has its own operating system and applications. The hypervisor allocates the underlying physical computing resources such as CPU and memory to individual virtual machines as required. Thus, it supports the optimal use of physical IT infrastructure.
+
+
+
+LINUX OS::
+~Linux is everywhere
+
+VM launch from EC2(Elastic computing)for AWS::
+
+Steps
+1. AWS Academy-->Sandbox Environment-->AWS-->-->console home-->search for ec2 and click on it
+2.launch and install click on it
+3.give any name don't change any default settings don't change
+4.In ec2-->key pair-->click create new key pair-->Give any name (roll no)or any name the don't change any options-->click on create key pair
+5.Come to network settings don't change scroll down -->launch instance(click on it)
+6.Click on instances -->we can see your own VM server
+
+Virtual machine launch------
+Linux—VM—Launch—for—AWS
+Sandbox -aws
+S1:- console home 
+S2:- go to search bar and search for ec2 
+S3:- click on ec2(virtual services in cloud)
+S4:-come down and launch instance
+S5:- on launch instance give anyname in lowercase
+S6:- use amazon linux and go down
+S7:- create keypair-give your rollnumber and come down
+S8:-create key pair. We can see keypair is downloaded
+S9:- come down to see storage you can see a launch instance on right
+S10:- after you see success, click on instance on above and click on it to see linux server is created
+
+mobaXterm
+S1: section
+S2:-ssh
+We need ip address, username, password
+S3:-Go to aws instance select it
+S4:- you will get details on down side 
+You have public ipv4 ip address copy it
+S5:- paste at remote host
+Go to aws again click on connect button after selecting in instance
+And select ssh client and copy the thing between “ and @ it is the user name
+S6:- now copy it in specify user in mobaXterm
+Go to advanced setting in mobaXterm
+And go to downloads for the keypair which we downloaded from use private key.
+
+
+
+-----Types of shells in Linux-----
+
+k shell
+z shell 
+c shell
+sh-shell
+bash- bourne again shell 
+
+$--means a standard user account
+#--means a root account
+
+--------Founder of Linux OS-------
+Linus Torvald
+
+-----Basic Linux commands----
+
+1.sudo su
+~"#" represents a root user/account
+
+2.pwd
+(Print working directory)
+
+3.ls
+list of items in a file
+
+4. exit
+exits from root account to standard account
+
+5.cat > filename
+creates a text file
+Enters the text file in that
+for saving this txt file
+~ also used to replace the content of the existing file
+
+6.ctrl+z
+for saving file
+
+7.cat >> filename
+adds the extra information into the existing file
+
+8.cat filename
+shows the content in the file
+
+8.ls -l
+gives the output of the file even more
+
+9.ls -la(important command)
+gives the information about the existing files along with that also shows the hidden files/directories created by OS itself . The user doesn't have the direct access to this 
+output which starts with the 'd' is a directory and the other are files
+
+10.clear
+clears the screen
+
+11.mkdir
+make a directory
+
+12.cd directory_name
+change to directory
+
+13.cd ..
+step down to one directory to the previous directory
+
+14.cd path of the new directory
+changes directly to the given path directory
+
+15.rm filename
+removes the file 
+
+16.rm -r directory_name/file path
+to remove directory with confirmation every time
+
+
+17.rm -rf directory_name 
+to remove directory forcefully without confirmation
+
+18.man _command_
+Ex: man ls
+gives the manual information of a command
+
+19.touch filename
+used to create a empty file ,at a time we can create multiple files
+and also used to change the timestamp of the file creation
+
+20.cp filename destination(directory)
+Ex: cp file1 dir1
+to copy the file
+Also --- 
+cp filename(source) destination path
+Ex: cp file10 /home/ec2-user/dir1
+
+21.cat file_path
+opens the file in the given path
+
+22.mv filename new filename(destination file)
+it is a cut paste concept
+
+23.history
+to see the commands we used (history of used commands)
+
+24.uname -r (important command)
+gives the kernel version
+
+
+----Package management tools in Linux(most commonly used)----
+1.apt(available for ubuntu)
+2.yum(Amazon Linux only use this tool)
+
+25.yum update
+it is software i.e. is updates the software
+
+ 
+----Editing tools available in Linux----
+vi - obsolete -older(for every action we need a command for this tool)
+vim -latest(vi updated to vim ,flexible than vi)
+nano -latest
+
+25.vim filename
+used to create a new file and edit (OR) opens a existing file and edit
+
+vim has to modes 
+1.read only mode
+2.insert mode
+but it by default it is in read only mode
+to edit the info in file we need to press 'i' on the keyboard. Otherwise it can't be edited. in insert mode file can't be saved .we need to go back to the read only mode by pressing 'esc' on keyboard. then to save we need to press ':wq'(write-quit)
+there are shortcuts available in vim like notepad.
+to come out of the file without saving the file we need to press ':q!'(!--forcefully closes the file)
+
+26.vimtutor
+to learn about vim tool
+to come out of the tutor press ':q!'
+ 
+27.nano filename
+it doesn't have any modes it directly goes to insert mode
+by pressing 'ctrl+ o' we can write and 
+'ctrl+ x' we can exit the file , we can see options for editing like save, exit, write etc...
+
+
+
+
+
+----Linux file hierarchy----
+
+stage1		/(main dir.)
+		|
+stage2	bin boot dev etc home root ......
+                  |
+stage3	Alice bob ...other users
+
+*stage 1 and stage 2 are completely protected where standard users(stage 3) can't use the / and other directories in the upper stages> it is not visible for the users.
+*The upper stages can control the lower stage users
+*the standard users can't elevate to the root user until the root user gives the permission
+
+-------etc directory---------
+
+All the configuration files and complete info about configuration is stored in '/etc' directory. it is also called the brain of the computer. it is one of the important directories in Linux
+
+28.cd /etc
+gives the config files in the computer
+
+29.ls -l | more
+to see a few directories in computer to see line by line, to kill this process press 'ctrl+c'
+
+30.ctrl+c
+in Linux it is used to kill the any running process
+
+31.cat passwd 
+(or)path command-- cat /etc/passwd
+it contains the brief information about the users in Linux
+
+32.vim shadow (or)
+path command-- cad /etc/shadow 
+one of the important file in etc
+*gives the brief info of password requirement of every user
+
+33.cat /etc/group
+it gives the info about what group the user is in or belong to
+
+34.date
+gives the date and time info
+
+35. timedatectl
+gives the time zone and the date
+
+36. cal 
+gives the present month
+
+37.cal month_name
+gives the specified month calendar
+
+38.tail passwd
+gives the last 10 lines of the etc file
+
+39.head -n 5 passwd
+gives the starting 5 lines. If we don't give the '-n' then by default it gives the first 10 lines
+
+40.tail -n 5 passwd
+gives the last 5 lines. If we don't give the '-n' then by default it gives the last 10 lines
+
+----------------------------
+
+41.useradd user_name
+it is command for add the new user 
+
+41.whoami
+it is used to identify with which user i logged in
+
+42.su user_name
+it is used to switch to specific user
+
+*if any user want to login to another user he need to enter the password
+*root can have access to the user accounts and Dir's
+root can access the user, edit, delete everything.
+
+43.passwd username
+to create a password for the given username
+only root can create password
+
+44.userdel username
+deletes the user
+
+45.passwd 
+changes the current password
+
+46.vim passwd(detailed and easy info)
+gives detailed and easy info about passwords of users 
+to exit from it press ':qa'
+
+
+============== SERVER ================
+
+--------LAYERS OF SERVER APPLICATION---------
+
+	website
+	   |
+4.	User(design)
+	   |
+3. application(webserver application)
+   Ex: APACHE,NODE,REACT,GOOGLE FLUTTER
+	   |
+2.   OS(SERVER VERSION)
+	   |
+1.  HARDWARE(MEMORY,STORAGE,CPU)(physical or virtual)
+
+
+Ex: website -->Linux -->server
+website - cloudkitchen.com
+
+layers will be
+
+4.content(cloud kitchen i.e. graphics info)
+3.webserver application
+2.ubuntu server latest version
+1.hardware (16gb, 2tb,10 cores)
+
+Only the content will be created by the customer/client
+but not the below layers
+
+2. Email server
+
+->Emails
+->Application email server
+->OS server
+->hardware
+
+3. IP SERVER
+
+->IPs
+->IP SERVER APPLICATION
+->OS SERVER
+->HARDWARE
+
+4. LMS server
+Ex: Udemy,..etc
+
+->content
+->LMS application(Moodle)
+->OS server
+->hardware
+
+5. amazon prime
+
+->videos
+->OTT application server
+->OS
+->hardware
+
+--------- TYPES OF SERVERS ----------
+1.physical -->on-premise 
+2.virtual --> cloud server
+
+
+47.
+f/d   user  group  others
+-     rwx   rwx    rwx
+-     rw-   rw-    r--
+
+where,
+r-->read permission 
+w-->write permission
+'-'--> no permission
+x --> execute 
+- --> file(in f)
+d -->directory
+
+Ex: scenario for salary of employees 
+
+dept    users groups  others
+account ---   r--     ---
+hr      rwx   rwx     ---
+mrktg   ---   ---     ---
+
+----------
+The permissions are also represented by numerical format
+>> r - 4
+>> w - 2
+>> x - 1
+
+Ex: chmod 777 test = chmod (rwx rwx rwx filename)(for all users, groups, others) filename
+
+chmod 600 test (or chmod rw- --- --- filename) >> read and write for user and no other permissions for groups and others
+
+
+
+48.chmod u'' filename
+the command to change the permissions for the user
+
+49.chmod g'' filename
+the command to change the permissions for the group
+
+50.chmod o'' filename
+the command to change the permissions for the others
+
+in the '' 
+--->"(-(permission) means removes the permission Ex: chmod u-w filename removes write permission for the user
+Likewise +(permission) means adds the permission Ex: chmod u+w filename adds write permission for the user)"
+
+===================== CLOUD ==========================
+------CLOUD SERVICE PROVIDERS(CSP)------
+AWS
+Azure
+gcloud
+oracle cloud
+
+NIST-National Institute of standards and technology
+
+cloud should have a atleast 5 characteristics according to NIST::
+
+1. on-demand self service:
+whenever you have demand for service you can create a server and use it for your purpose. Whenever there is a demand for server self service is implemented.
+
+Ex: student can create their own server by logging in to the service like aws academy. It only done whenever their is demand for server.
+
+
+2. board network access:
+widely setup network for every server, so that user can access from anywhere.
+--(submarine cable map is used to see the optic fibers connections from one place to other)
+
+3. resource pooling :
+there is no concept of resources exhausted in any cloud service cause they(data centers) always predict the usage of a client at anytime using ML. There will be unlimited resources(hardware machines -- cpu, memory, storage..etc)
+this is called resource pooling. The resource pooling should be done continuously so that no user/client doesn't face any issue.
+
+4. elasticity :
+The increase / decrease of the resources of a server. The
+ability resources of the cloud should be fluctuated based on the needs of the user is called elasticity.
+
+
+5. measured services/metered services :
+The cloud services that are used for time-to-time it is 
+chargeable for usage of server and resources. The charges that are applied are completely transparent.
+
+
+------PPT(HW)-------
+Operating System
+Server-Client
+Virtualization
+Linux
+Cloud Computing
+--------------------
+ 
+
+Cloud services models
+>>IAAS
+>>PAAS
+>>SAAS
+(https://www.javatpoint.com/cloud-service-models)
+
+
+Cloud deployment models:
+1. private cloud
+Ex: private servers for individual colleges
+
+2. public cloud
+Ex: AWS, Azure, Google clouds
+
+3. community cloud 
+Ex: these are used by US govt. for govt. employees 
+
+4. hybrid cloud
+Combination of private and public 
+Ex: Aditya clg, transaction websites 
+    pcidss
+
+
+AWS global infrastructure
+three things to understand in AWS
+ 
+1. region / geographical location
+	|
+2. Availability Zones-->2 or more availability zones is called a region .A minimum 100km b/w two availability zones
+the availability zone is where data centers lies
+	|
+3. Data centers
+in data centers there consists physical servers 
+
+
+AWS GLOBAL INFRASTRUCTURE:-
+-------------------------------------
+overrall in the world total 33 aws regions and 105 availability zones.In india 2aws regions those are in mumbai and hyderabad each region have 3 availability regions.
+AWS Regions  --> Azs --> Data center --> Physical resources --> Data
+AWS REGIONS:-Based on Geographical location. Here region is not one country. two 0r more availability zones formed a region
+AWS AVAILABILITY ZONES:- availability zone contains minimum two data centers. The distance between two availability zones is minimum 100kms.whenever you create a datacenter it create the same datacenter in the another availability zone. 
+AWS DATACENTERS:- Data Centers contains the servers, virtual .The servers located in the datacenters.
+
+
+Aws infrastructure connected with
+ Low latency
+hidh availability
+high bandwidth
+Instance --> Virtual Machine --> Virtual servers
+AMI -> Amazon Machine Image
+EC2 or ECC -> Elastic Compute Cloud
+SSH->Secured shell
+
+To connect a server from browser:
+-------------------------------------
+Amazon Management Console
+AWS Management Console:- root and password is required because those don't have account just we access login credentials.
+so it is flexible way but not recommended way than putty and mobaxtrem.This is especially need root user credentials.
+where you download the pem file go that location and enter  cmd .
+then enter the command in cmd 
+ssh -i pemame.pem ubantu@public ip address    //here the ip address is download from AWS account.
+connect in the browser:-
+After creation of instance click on connect next click on Ec2 instance connect then next scroll down there you see connect option click on it.It will connect you to  aws console
+
+rdp -> remote desktop protocol
+-------protocol port numbers ------
+rdp protocol number is tcp 3389
+ssh -> port 22
+telnet -> port 23 (not a secured connection)
+sftp(secured file transfer protocol) -> port 22
+
+
+------------- UPLOADING FILES TO SERVER --------------
+> create a VM in AWS 
+> launch instance with Linux server or ubuntu server
+> create new session
+~~~ Using Linux server
+> click on the arrow button on the left side in sftp
+> select file and upload
+~~~ Using Ubuntu server
+> in session click on the sftp 
+> paste the public address of the ubuntu server instance
+> user name ubuntu
+> enter private key in advanced sftp settings
+> drag and drop the files u want to upload
+
+====================================================
+-------------- WEBSITE DEPLOYMENT ------------------
+
+components needed
+> data - content
+> security group -- port no. 80 -- protocol httpd
+> webserver application 
+> webserver OS (we are using linux here)
+> hardware
+
+~~ STEPS:
+> launch amazon Linux
+> change to root user
+> update the os if it is amazon Linux then it yum update ,if it is ubuntu it is apt update.
+> yum install httpd (to install the webserver packages)
+> go to EC2 instances and then to created instance
+> Go to security groups and edit inbound 
+> in inbound add http in it and save changes
+> now go to mobaXterm and run command 'systemctl start httpd' and press enter
+> if it shows no error then copy the public address of the browser and paste it
+> we get a default html file (we can edit it too)
+
+~~~~~Changing content in the default html file ~~~~~~
+> cd /usr/share
+> cd /usr/share/httpd/noindex/
+> open the file by entering command 'cat index.html'
+> to edit the content or html file use vim command
+
+In ubuntu
+
+components needed
+> data - content
+/var/www/html
+then open -- index.html file and edit it
+sample webpage - public ip 
+> security group -- port no. 80 -- protocol httpd
+'systemctl start apache2'html/index.
+> webserver application 
+install apache2 (command -- apt-get install apache2)
+before apache2 install we need to upgrade the system
+command -- 'apt-get update'
+> webserver OS (we are using ubuntu here)
+> hardware
+
+
+========================================================================
+ 
+   ---------Protocols & port no. for remote connection ------------
+> RDP(Remote desktop protocol) -- '3389'  -- only used for windows environment(connection is secured / encrypted)
+> SSH(Secure shell) -- 22 -- used for Linux version can't be used for windows (Encrypted connection)
+> TELNET -- 23 -- Linux unsecured connection (Plain text)
+
+------------- Other connections---------------
+these are used to transfer files
+ > SFTP (Secure file transfer protocol) -- '22' -- encrypted file transfer
+ > FTP (file transfer protocol) -- '21' -- not a secured one / plain transfer 
+ > HTTP(Hypertext transfer protocol) -- '80' -- not a secured(unencrypted)
+ > HTTPS(Hypertext transfer protocol secure) -- '443' --secured transfer
+
+
+===========================================================================
+ ~~~~~~~~~~~~~ web application deployment ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+************ File transfer for web application IN UBUNTU
+
+> give permissions to all the users, groups and others by giving command 'chmod 777 /var/www/html' 
+> open sftp for the ubuntu and change to the direction to the above path (/var/www/html) in cmd of the sftp 
+> delete the existing index.html file 
+> now drag and drop the folder/directory 
+Sample: Coffee shop directory
+click on coffee shop directory and we can see two files assets and index.html 
+first drag and drop the assets directory/folder
+and then drag and drop the index.html
+> now start the web server by using command 
+'systemctl start apache2'
+> refresh the page we can get the downloaded/import web application.
+
+
+26/6/24                               
+
+---------------------------------
+Deploying a website using ngnix:
+----------------------------------
+1.location of the file :/usr/share/nginx/html/index.html-----acts as reverse proxy that means there is a firewall system which filters the connections that are coming.
+2.location of the file :/var/www/html----deploy
+                     vim index.html
+                     rm index.html
+                     
+
+---------------------------------------
+Deploying the website using windows:
+---------------------------------------
+1.launch the windows server
+2.start---server manager----add roles--next--next--roles---webserver iis---add preferences--next--next--next--install--close tat server manager
+
+
+server iis(internet information service)----->the name of webserver in Windows
+To write the text:
+-----------------------------------------------------
+1.this ps--local disc(c drive)--inetpub--wwwroot----delete two files--create a new text document---write text--save as index.html---now move to browser-- refresh
+
+
+To see the website in the web browser :the location of index file in Windows after installing IIS web service is c:/inetpub/wwwroot
+-------------------------------------------
+2.open local disc---inetpub---wwwroot---open the personal folder of our laptop--downloads---select the template we want---open the template folder----copy the files from our laptop---paste in the local disc---inetpub---wwwroot location ---refresh the browser.
+
+
+
+**Elastic ip address is a permanent address we need to attach to the servers so that if we shutdown it doesn't change.
+1.if we stop the instance and start the instance again then the ip address will change.TO see the before webpage in the browser then we use this elastic ip and start the instance and refresh the webpage.
+
+****ec2 dashboard---elastic ip----Allocate elastic ip address----Allocate----select the ip---Actions---Associate Elastic ip address---instance type (select which one you want to run)----Associate---instances----instance state---start the instance---copy ip address----paste it in the browser--refresh.
+
+
+
+============== NGINX ==========
+
+nginx:it is also one webserver
+1 apt-get update
+2 apt-get install nginx
+3 systemctl start nginx
+4 cd /usr/share/nginx/html
+
+~~ Availability zones in N. Virginia -- 8
+
+~~ Database servers doesn't use public Ip's
+
+
+===============================================
+
+>>> init 6 - restart instance
+>>> init 0 - shutdown
+
+
+
+~~ Editing the instance settings before launching
+
+> go to create instance
+
+> name the instance 
+
+> select the no.of instances(for a student account u can't launch more than 2 instances at a time)
+
+> create a new key pair
+
+> go to network settings click on edit u can chance the availability zone in Subnet u can change it
+
+> Auto-assign public ip -- enable/disable(ur wish)
+
+> now add security group 'source type -- http ', 'source type - 0.0.0.0/0' click 'save changes'
+
+> Scroll down to advanced settings to user data then give the commands which u want to execute after launching the instance
+Ex: For ubuntu
+#!/bin/bash ---- gives the command to go to bash 
+sudo su
+apt-get update -y 
+apt install apache2 -y
+systemctl install apache2
+
+by giving this after launching instance we get the http output cause the operations don't backend .
+We can apply any no. of instances at a time the same execution commands.
+
+
+~~ issues in terminating and creating instances ~~~
+
+> if we accidently stop/terminate an instance in real time there will be a downtime even if it's for a few seconds or minutes
+ ** the protection is need to be applied to the instances 
+> Go to instances and select the instance u want to give protection 
+> click on the 'instance state ' then select the 'actions' click on 'instance settings' then go to 'change stop protection' and enable the option
+
+simply, instances -> select instance -> actions -> instance settings -> change the stop protection -> enable
+(You can apply these changes for protection from terminating and shutdown)
+
+	By doing this, there will be protection for the selected instances. If you want to terminate or stop the instance it will double confirm it to delete.
+
+~~ For stoping or terminating instance ~~
+ without the above changes 
+> instances -> select instance -> instance state -> stop instance(for stopping instance)/terminate instance(for terminating instance)
+
+with the above changes 
+> instances -> select instance -> actions -> instance settings -> change stop protection(for stopping instance)/change termination protection (for terminating instance) ->  disable
+
+============================================
+~~~ Changing the index.html file and editing with other ~~~
+IN UBUNTU
+
+> open instances and launch instances as above editings
+#!/bin/bash ---- gives the command to go to bash 
+sudo su
+apt-get update -y 
+apt install apache2 -y
+systemctl install apache2
+
+> enable the permissions for users
+chmod 777 /var/www/html
+ 
+> now remove the index.html file 
+rm /var/www/html/index.html
+
+> create an empty index.html file using touch command
+touch /var/www/html/index.html
+
+> use echo(command used to print)
+syntax: echo "content to be printed" > filename where content need to be sent/path
+echo "this is technical hub" > var/www/html/index.html
+
+> save changes and copy ip address and open in browser
+
+
+SIMPLE PATH FOR ABOVE PROCESS:
+
+instances -> 
+
+**EC2 is a IaaS
+
+
+=======================================================
+		PLATFORM AS A SERVICE
+=======================================================
+
+
+* AWS Elastic Beanstalk is a PaaS
+* It handles the deployment
+* An easy way to get web application up and running
+* No additional charges for Elastic Beanstalk
+* It is a managed service that automatically handles
+> Deployment
+> Load balancing
+> Health monitoring
+
+~~ Benefits
+> fast and simple to start using
+> difficult to outgrow
+> complete resource control
+> developer productivity
+
+~~~~ Launching Beanstalk in AWS academy
+
+Steps to launch instances in Beanstalk
+
+> go to sandbox environment and start the lab
+> Go to console home and search Elastic Beanstalk
+> then click on create application and select web server environment 
+> give the application name . by this env will be added by default. Ex:My-webserver the environment file will be - My-webserver-env 
+> Come to domain, now give a domain name
+> to check if the domain is available or not click on 'check availability'
+> In platform give the platform type as 'Tomcat' and don't change the default changes made by it.
+> Go to Application code ---- click Upload your code then give any version label (ur wish) click local file 
+> application upload
+select all related to the application.
+For example:
+coffee shop website application:
+open the folder and select all the files by clicking ctrl+A then right click select compress to Zip file.
+> In Presets Click the High availability (For root account)
+> In Presets Click the High availability (For student account)
+> Click next
+> In service role use default one 'Use an existing service role' in that select 'Ec2InstanceRole' and also for EC2 key pair select the default key 'vockey'
+for EC2 instance profile select 'LabInstanceProfile'
+> Click next
+> In VPC don't select the work VPC
+> Come to Instance Subnets select the availability zones any no. of zones
+> Scroll down and click next
+> Scroll down to EC2 security groups and click default
+and click next
+> Again scroll down to click next
+> submit
+Note: You can check if the instance created or not in 
+aws console -> search EC2 --> instances
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
